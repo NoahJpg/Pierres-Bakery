@@ -59,11 +59,24 @@ namespace PierresBakery.Tests
       // Assert
       Assert.AreEqual(expectedPrice, actualPrice);
     }
-        [TestMethod]
+    [TestMethod]
     public void BreadPrice_ReturnsCorrectPriceForFiveLoves_Fifteen()
     {
       // Arrange
       Bread bread = new Bread(5);
+      double expectedPrice = 20;
+
+      // Act
+      double actualPrice = bread.CalculatePrice();
+
+      // Assert
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
+    [TestMethod]
+    public void BreadPrice_ReturnsCorrectPriceForSixLoves_Fifteen()
+    {
+      // Arrange
+      Bread bread = new Bread(6);
       double expectedPrice = 20;
 
       // Act
