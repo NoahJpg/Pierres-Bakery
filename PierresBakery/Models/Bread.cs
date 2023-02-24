@@ -5,12 +5,12 @@ namespace PierresBakery.Models
   public class Bread
   {
     public int Quantity { get; set; }
-    public double Price { get; }
+    public double Price { get; private set; }
     
     public Bread(int quantity)
     {
       Quantity = quantity;
-      Price = CalculatePrice();
+      Price = 5;
     }
 
     public double CalculatePrice()

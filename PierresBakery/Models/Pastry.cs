@@ -5,22 +5,22 @@ namespace PierresBakery.Models
   public class Pastry
   {
     public int Quantity { get; set; }
-    public double Price { get; }
+    public double Price { get; private set; }
 
     public Pastry(int quantity)
     {
       Quantity = quantity;
-      Price = CalculatePrice();
+      Price = 2;
     }
 
     public double CalculatePrice()
     {
-      int pastryDiscount = Quantity * 2; // Calculates price with no discount
+      double pastryDiscount = Quantity * Price; // Calculates price with no discount
       if (Quantity >= 4)
       {
-        pastryDiscount -= (Quantity / 4 ) * 2; // Calculates the discount by multiplying the number pastry sets by 2, and subtracts it from the total
+        pastryDiscount -= (Quantity / 4 ) * Price; // Calculates the discount by multiplying the number pastry sets by 2, and subtracts it from the total
       }
-      return pastryPrice * Price;
+      return pastryDiscount;
     }
   }
   

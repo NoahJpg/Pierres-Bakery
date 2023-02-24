@@ -31,7 +31,7 @@ namespace PierresBakery
       Bread bread = new Bread(breadQuantity);
       Pastry pastry = new Pastry(pastryQuantity);
 
-      string[] lines2 = {$"Total cost for {breadQuantity} loaves of Bread: ${bread.Price}", $"Total cost for {pastryQuantity} Pastries: ${pastry.Price}", $"Total cost for your order: ${bread.Price + pastry.Price}"};
+      string[] lines2 = {$"Total cost for {breadQuantity} loaves of Bread: ${bread.CalculatePrice()}", $"Total cost for {pastryQuantity} Pastries: ${pastry.CalculatePrice()}", $"Total cost for your order: ${bread.CalculatePrice() + pastry.CalculatePrice()}"};
       foreach (string line in lines2)
       {
         Console.WriteLine(line);
