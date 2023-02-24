@@ -12,12 +12,26 @@ namespace PierresBakery.Tests
     {
       // Arrange
       Bread bread = new Bread(1);
-      decimal expectedPrice = 5;
+      double expectedPrice = 5;
       // Act
-      decimal actualPrice = bread.Price;
+      double actualPrice = bread.Price;
       // Assert
       Assert.AreEqual(expectedPrice, actualPrice);
 
+    }
+
+    [TestMethod]
+    public void BreadPrice_ReturnsCorrectPriceForTwoLoves_Ten()
+    {
+      // Arrange
+      Bread bread = new Bread(2);
+      double expectedPrice = 10;
+
+      // Act
+      double actualPrice = bread.CalculatePrice();
+
+      // Assert
+      Assert.AreEqual(expectedPrice, actualPrice);
     }
   }
 }
