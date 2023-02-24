@@ -28,10 +28,20 @@ namespace PierresBakery
       Console.WriteLine("How many pastries would you like? ");
       int pastryQuantity = int.Parse(Console.ReadLine());
 
+      Console.WriteLine("How many Cinnamon Rolls would you like today?");
+      int cinnamonRollQuantity = int.Parse(Console.ReadLine());
+
+      CinnamonRoll cinnamonRoll = new CinnamonRoll(cinnamonRollQuantity);
       Bread bread = new Bread(breadQuantity);
       Pastry pastry = new Pastry(pastryQuantity);
 
-      string[] lines2 = {$"Total cost for {breadQuantity} loaves of Bread: ${bread.CalculatePrice()}", $"Total cost for {pastryQuantity} Pastries: ${pastry.CalculatePrice()}", $"Total cost for your order: ${bread.CalculatePrice() + pastry.CalculatePrice()}"};
+      string[] lines2 = 
+      {
+      $"Cost for {breadQuantity} loaves of Bread: ${bread.CalculatePrice()}", 
+      $"Cost for {pastryQuantity} Pastries: ${pastry.CalculatePrice()}", 
+      $"Cost for {cinnamonRollQuantity} Cinnamon Rolls: ${cinnamonRoll.CalculatePrice()}", 
+      $"Total cost for your order: ${bread.CalculatePrice() + pastry.CalculatePrice() + cinnamonRoll.CalculatePrice()}"
+      };
       foreach (string line in lines2)
       {
         Console.WriteLine(line);
