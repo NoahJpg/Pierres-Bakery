@@ -6,12 +6,28 @@ namespace PierresBakery.Tests
   [TestClass]
   public class PastryTests
   {
-    // Test methods go here
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void PastryPrice_ReturnsCorrectPriceForOnePastry_Two()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      // Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      // Arrange
+      Pastry pastry = new Pastry(1);
+      double expectedPrice = 2;
+      // Act
+      double actualPrice = pastry.Price;
+      // Assert
+      Assert.AreEqual(expectedPrice, actualPrice);
     }
+    [TestMethod]
+    public void PastryPrice_ReturnsCorrectPriceForTwoPastries_Four()
+    {
+      // Arrange
+      Pastry pastry = new Pastry(2);
+      double expectedPrice = 4;
+      // Act
+      double actualPrice = pastry.Price;
+      // Assert
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
+
   }
 }
