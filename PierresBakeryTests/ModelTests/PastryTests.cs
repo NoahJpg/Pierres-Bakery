@@ -28,6 +28,16 @@ namespace PierresBakery.Tests
       // Assert
       Assert.AreEqual(expectedPrice, actualPrice);
     }
-
+    [TestMethod]
+    public void PastryPrice_ReturnsCorrectPriceForThreePastries_Six()
+    {
+      // Arrange
+      Pastry pastry = new Pastry(3);
+      double expectedPrice = 6;
+      // Act
+      double actualPrice = pastry.Price;
+      // Assert
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
   }
 }
