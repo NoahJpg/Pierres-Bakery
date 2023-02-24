@@ -60,7 +60,7 @@ namespace PierresBakery.Tests
       Assert.AreEqual(expectedPrice, actualPrice);
     }
     [TestMethod]
-    public void BreadPrice_ReturnsCorrectPriceForFiveLoves_Fifteen()
+    public void BreadPrice_ReturnsCorrectPriceForFiveLoves_Twenty()
     {
       // Arrange
       Bread bread = new Bread(5);
@@ -73,11 +73,24 @@ namespace PierresBakery.Tests
       Assert.AreEqual(expectedPrice, actualPrice);
     }
     [TestMethod]
-    public void BreadPrice_ReturnsCorrectPriceForSixLoves_Fifteen()
+    public void BreadPrice_ReturnsCorrectPriceForSixLoves_Twenty()
     {
       // Arrange
       Bread bread = new Bread(6);
       double expectedPrice = 20;
+
+      // Act
+      double actualPrice = bread.CalculatePrice();
+
+      // Assert
+      Assert.AreEqual(expectedPrice, actualPrice);
+    }
+    [TestMethod]
+    public void BreadPrice_ReturnsCorrectPriceForSevenLoves_TwentyFive()
+    {
+      // Arrange
+      Bread bread = new Bread(7);
+      double expectedPrice = 25;
 
       // Act
       double actualPrice = bread.CalculatePrice();
