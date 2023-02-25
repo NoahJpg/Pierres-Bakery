@@ -1,4 +1,4 @@
-# _Pierres Bakery_
+# _Pierre's Bakery_
 
 #### By _**Noah Atkinson**_
 
