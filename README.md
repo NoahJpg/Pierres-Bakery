@@ -2,7 +2,7 @@
 
 #### By _**Noah Atkinson**_
 
-#### _Description_
+#### _Bakery application that will prompt the user for how many pastries and loaves of bread they want, and return the price_
 
 ## Technologies Used
 
@@ -12,16 +12,16 @@
 
 ## Description
 
-_This application will prompt the user to enter if they'd like to add Bread or Pastry to Cart then how many to add to Cart. It will then give the prompt an option to add more as a yes or no._
-_If the user is done adding items to the cart, the program will display their cart and a Cart Total._
+_This application will prompt the user to enter an amount of loaves of bread, pastries, and cinnamon rolls._
+_It will then calculate the price based on the current sale of Buy 2 get 1 free of bread, and Buy 3 get 1 free of pastries and return the user their total cost_
 
 ## Setup/Installation Requirements
 
 * _Install .Net 6 SDK:_
 * [OS X and Windows Instructions](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net)
 * _Clone this repo to a local directory_
-* _Using Terminal on OS X or PowerShell on Windows navigate to the top directory that this repo was cloned to (YourPath/PierresBakery.Solution):_ 
-* _Confirm all business logic tests pass with MSTest by running commands (not including the dollar symbol):_
+* _Using Terminal on OS X or PowerShell on Windows navigate to the top directory that this repo was cloned to_ 
+* _Confirm all business logic tests pass with MSTest by running commands :_
 * _$ dotnet restore ./PierresBakery.Tests_
 * _$ dotnet test ./PierresBakery.Tests_
 * _Then run the program with command :_
